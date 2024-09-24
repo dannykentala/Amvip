@@ -1,0 +1,6 @@
+@Amvip.Api_HostAddress = http://localhost:5277
+
+GET {{Amvip.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
