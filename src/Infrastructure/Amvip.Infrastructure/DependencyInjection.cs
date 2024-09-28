@@ -10,7 +10,7 @@ namespace Amvip.Infrastructure
     public static IServiceCollection AddPersistence(this IServiceCollection services)
     {
       //----- BaseContext
-      services.AddDbContext<IBaseContext, JsonBaseContext>();
+      services.AddDbContext<JsonBaseContext>();
 
       //----- Repositories
       services.AddScoped<IPersonalDataRepository, PersonalDataRepository>();
