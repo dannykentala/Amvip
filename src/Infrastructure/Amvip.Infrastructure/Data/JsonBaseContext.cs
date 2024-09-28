@@ -14,6 +14,8 @@ public class JsonBaseContext : BaseContext
     if(!_isLoaded)
     {
       GetDataBase();
+      base.SaveChanges();
+
       _isLoaded = true;
     }
   }

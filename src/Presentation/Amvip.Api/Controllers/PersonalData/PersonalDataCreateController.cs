@@ -1,4 +1,4 @@
-using Amvip.Domain.Interfaces.Repositories;
+using Amvip.Application.Managers;
 using Amvip.Domain.Models.DTOs.Getters;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,16 +8,16 @@ namespace Amvip.Api.Controllers.PersonalData
   [ApiController]
   public class EmployeesCreateController: ControllerBase
   {
-    private readonly IPersonalDataRepository _repository;
-    public EmployeesCreateController(IPersonalDataRepository repository)
+    private readonly PersonalDataManager _manager;
+    public EmployeesCreateController(PersonalDataManager manager)
     {
-      _repository = repository;
+      _manager = manager;
     }
 
     [HttpPost]
-    public PersonalDataDto Create(PersonalDataDto employee)
+    public IActionResult Create(PersonalDataDto employee)
     {
-      return  _repository.Create(employee);
+      return StatusCode(StatusCodes.Status201Created, _manager.Create(employee));
     }
   }
 }

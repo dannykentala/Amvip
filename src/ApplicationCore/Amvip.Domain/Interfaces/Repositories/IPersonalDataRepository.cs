@@ -1,9 +1,8 @@
-using Amvip.Domain.Models.DTOs.Getters;
 using Amvip.Domain.Models.Entities;
 
 namespace Amvip.Domain.Interfaces.Repositories;
 
-public interface IPersonalDataRepository
+public interface IPersonalDataRepository: IBaseRepository<PersonalData>
 {
-  PersonalDataDto Create(PersonalDataDto personalData);   
+  PersonalData GetByDocument(string document);
 }
