@@ -1,9 +1,8 @@
-using Amvip.Domain.Models.DTOs.Getters;
-using Amvip.Domain.Models.DTOs.Setters;
+using Amvip.Domain.Models.Entities;
 
 namespace Amvip.Domain.Interfaces.Repositories;
 
-public interface ISubscriptionRepository
+public interface ISubscriptionRepository: IBaseRepository<Suscription>
 {
-  SuscriptionDto Add(SuscriptionCreateDto suscription);   
+  Suscription GetByPartnerId(string partnerId);
 }

@@ -1,16 +1,72 @@
 {
   "PersonalData": [
     {
-      "Id": "799caf3f-655e-4bc8-881f-9735eb4a0aaf",
-      "DocumentNumber": "10435611",
-      "Name": "Mario Mendoza",
-      "Phone": "3019872180"
-    },
-    {
-      "Id": "b0b5b7be-9ea7-4b31-9630-13ad11e3997c",
+      "Id": "23458ca0-2aed-4676-bee9-08def344455d",
       "DocumentNumber": "10435611",
       "Name": "Valeria Mendoza",
       "Phone": "3019872180"
     }
-  ]
+  ],
+  "Users": [
+    {
+      "Id": "5ce89bdf-497b-41e6-8fe0-fa1acc605729",
+      "Username": "user",
+      "Password": "pasword123",
+      "Rol": 1,
+      "PersonalDataId": "0e4fd981-ee17-42de-8b0f-6b8623680672"
+    },
+    {
+      "Id": "4a0875c6-777d-4ec5-8f54-80dda78b42d4",
+      "Username": "user",
+      "Password": "pasword123",
+      "Rol": 1,
+      "PersonalDataId": "0e4fd981-ee17-42de-8b0f-6b8623680672"
+    },
+    {
+      "Id": "d021eec0-d6b4-46b3-b1f7-28a52161ffa8",
+      "Username": "user",
+      "Password": "pasword123",
+      "Rol": 1,
+      "PersonalDataId": "0e4fd981-ee17-42de-8b0f-6b8623680672"
+    },
+    {
+      "Id": "7bd7c084-5fcd-4cd8-86fa-2d8658bb6e57",
+      "Username": "user",
+      "Password": "pasword123",
+      "Rol": 1,
+      "PersonalDataId": "0e4fd981-ee17-42de-8b0f-6b8623680672"
+    },
+    {
+      "Id": "a3301f9e-65ae-4336-b234-92de7920d6ab",
+      "Username": "user",
+      "Password": "pasword123",
+      "Rol": 1,
+      "PersonalDataId": "0e4fd981-ee17-42de-8b0f-6b8623680672"
+    },
+    {
+      "Id": "fec32e08-7d7d-4e84-85a4-07e84ad72fd4",
+      "Username": "user",
+      "Password": "pasword123",
+      "Rol": 1,
+      "PersonalDataId": "0e4fd981-ee17-42de-8b0f-6b8623680672"
+    },
+    {
+      "Id": "1ed0bc38-130f-48a1-b70a-78de5fa7fbcb",
+      "Username": "user",
+      "Password": "pasword123",
+      "Rol": 1,
+      "PersonalDataId": "0e4fd981-ee17-42de-8b0f-6b8623680672"
+    },
+    {
+      "Id": "7e1db74c-f00c-437e-969a-5185ca5ef255",
+      "Username": "user",
+      "Password": "pasword123",
+      "Rol": 1,
+      "PersonalDataId": "23458ca0-2aed-4676-bee9-08def344455d"
+    }
+  ],
+  "Partners": [],
+  "SuscriptionDetails": [],
+  "Suscriptions": [],
+  "Invitations": []
 }

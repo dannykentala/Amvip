@@ -1,3 +1,4 @@
+using Amvip.Application.Generators.Responses;
 using Amvip.Application.Responses;
 using Amvip.Domain.Interfaces.Repositories;
 using Amvip.Domain.Models.DTOs.Getters;
@@ -8,7 +9,7 @@ namespace Amvip.Application.Managers;
 
 public class PersonalDataManager
 {
-  private readonly IPersonalDataRepository _personalDataRepository;
+  private readonly IPersonalDataRepository _repository;
   private readonly IMapper _mapper;
 
   public PersonalDataManager
@@ -17,7 +18,7 @@ public class PersonalDataManager
     IMapper mapper
   )
   {
-    _personalDataRepository = personalDataRepository;
+    _repository = personalDataRepository;
     _mapper = mapper;
   }
 
@@ -34,26 +35,24 @@ public class PersonalDataManager
 
   public Response<IEnumerable<PersonalDataDto>> GetAll()
   {
-    IEnumerable<PersonalData> data = _personalDataRepository.GetAll().ToList();
+    IEnumerable<PersonalData> data = _repository.GetAll().ToList();
     IEnumerable<PersonalDataDto> personalDataDto = _mapper.Map<IEnumerable<PersonalDataDto>>(data);
 
-    return ResponseGenerator.PersonalDataGetAll(personalDataDto);
-    // return personalDataDto;
+    return PersonalDataResponse.PersonalDataGetAll(personalDataDto);
   }
 
   public Response<PersonalDataDto> GetById(string id)
   {
-    PersonalData data = _personalDataRepository.GetById(id);
+    PersonalData data = _repository.GetById(id);
     PersonalDataDto personalDataDto = _mapper.Map<PersonalDataDto>(data);
-    return ResponseGenerator.PersonalDataGetById(personalDataDto);
+    return PersonalDataResponse.PersonalDataGetById(personalDataDto);
   }
 
   public Response<PersonalDataDto> Create(PersonalDataDto personalData)
   {
     PersonalData entity = _mapper.Map<PersonalData>(personalData);
-    _personalDataRepository.Create(entity);
-
-    // return personalData;
-    return ResponseGenerator.PersonalDataCreate(personalData);
+    _repository.Create(entity);
+    _repository.Save();
+    return PersonalDataResponse.PersonalDataCreate(personalData);
   }
 }

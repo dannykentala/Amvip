@@ -14,6 +14,11 @@ namespace Amvip.Infrastructure
 
       //----- Repositories
       services.AddScoped<IPersonalDataRepository, PersonalDataRepository>();
+      services.AddScoped<IUsersRepository, UsersRepository>();
+      services.AddScoped<IPartnersRepository, PartnersRepository>();
+      services.AddScoped<ISuscriptionDetailsRepository, SuscriptionDetailsRepository>();
+      services.AddScoped<ISubscriptionRepository, SubscriptionRepository>();
+      services.AddScoped<IInvitationsRepository, InvitationsRepository>();
 
       return services;
     }

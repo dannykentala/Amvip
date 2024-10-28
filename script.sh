@@ -20,13 +20,13 @@ declare projectName="Amvip"
 
 # dotnet new classlib -o Infrastructure/${projectName}.Infrastructure
 
-dotnet new xunit -o ../${projectName}.Test
+# dotnet new xunit -o ../${projectName}.Test
 
 ##----- RENAME FOLDERS -----#
-cd ${rootDir}
-mv ${projectName}.Test test
+# cd ${rootDir}
+# mv ${projectName}.Test test
 
-cd $rootProjectDir
+# cd $rootProjectDir
 
 
 ##----- LINK PROJECTS -----##

@@ -1,12 +1,14 @@
-namespace Amvip.Domain.Models.DTOs.Setters;
+using System.Text.Json.Serialization;
+using Amvip.Domain.Models.Enums;
 
+namespace Amvip.Domain.Models.DTOs.Setters;
 public class SuscriptionCreateDto
 {
-  public string SuscriptionType { get; set; }
-  public DateTime SuscriptionDate { get; set; }
-  public string Status { get; set; }
-  public int PartnerId { get; set; }
+  [JsonConverter(typeof(JsonStringEnumConverter))]
+  public SuscriptionTypeEnum? Type { get; set; }
 
-  //TODO: We should make a selector in frontend about posible details
-  public int SuscriptionDetailId { get; set; }
+  [JsonConverter(typeof(JsonStringEnumConverter))]
+  public StatusEnum? Status { get; set; }
+  public string PartnerId { get; set; }
+  public string SuscriptionDetailId { get; set; }
 }

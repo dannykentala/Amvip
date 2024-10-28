@@ -24,6 +24,7 @@
     <!-- <ProjectReference Include="..\src\ApplicationCore\Amvip.Application\Amvip.Application.csproj" /> -->
     <ProjectReference Include="..\src\Infrastructure\Amvip.Infrastructure\Amvip.Infrastructure.csproj" />
     <ProjectReference Include="..\src\ApplicationCore\Amvip.Domain\Amvip.Domain.csproj" />
+    <ProjectReference Include="..\src\ApplicationCore\Amvip.Application\Amvip.Application.csproj" />
   </ItemGroup>
 
 </Project>

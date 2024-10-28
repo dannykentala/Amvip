@@ -6,12 +6,12 @@ namespace Amvip.Api.Controllers.PersonalData
 {
   [Route("api/personalData")]
   [ApiController]
-  public class EmployeesCreateController: ControllerBase
+  public class PersonalDataCreateController: ControllerBase
   {
     private readonly PersonalDataManager _manager;
-    public EmployeesCreateController(PersonalDataManager manager)
+    public PersonalDataCreateController(PersonalDataManager personalDataManager)
     {
-      _manager = manager;
+      _manager = personalDataManager;
     }
 
     [HttpPost]

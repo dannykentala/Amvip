@@ -4,7 +4,7 @@ namespace Amvip.Domain.Models.Entities;
 
 public class VipRequest
 {
-  public int Id { get; set; }
-  public int PartnerId { get; set; }
+  public string Id { get; set; }
+  public string PartnerId { get; set; }
   public DateTime Date { get; set; }
 }

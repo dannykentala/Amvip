@@ -1,5 +1,4 @@
 using Amvip.Application.Managers;
-using Amvip.Domain.Models.DTOs.Getters;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Amvip.Api.Controllers.PersonalData
@@ -9,9 +8,9 @@ namespace Amvip.Api.Controllers.PersonalData
   public class PersonalDataController: ControllerBase
   {
     private readonly PersonalDataManager _manager;
-    public PersonalDataController(PersonalDataManager manager)
+    public PersonalDataController(PersonalDataManager personalDataManager)
     {
-      _manager = manager;
+      _manager = personalDataManager;
     }
 
     [HttpGet]

@@ -2,9 +2,11 @@ namespace Amvip.Domain.Models.DTOs.Getters;
 
 public class SuscriptionDto
 {
-  public string SuscriptionType { get; set; }
-  public DateTime SuscriptionDate { get; set; }
+  public string Type { get; set; }
+  public DateTime EnrollDate { get; set; }
   public string Status { get; set; }
+  
+  // From partners
   public string PartnerName { get; set; }
 
   // From SuscriptionDetails
