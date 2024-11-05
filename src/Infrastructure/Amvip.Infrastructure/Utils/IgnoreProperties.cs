@@ -4,6 +4,19 @@ using Amvip.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
+/*
+  ### READ THIS ARTICLE
+  https://stackoverflow.com/a/58499885
+
+  It talks about how to setup jsonignore, to be use with newtonsoft library
+
+  https://stackoverflow.com/questions/2954050/jsonignore-attributes-not-working-in-asp-net
+
+  https://dotnettutorials.net/lesson/include-and-exclude-properties-from-model-binding-in-asp-net-core-web-api/ -> using DTO
+
+  ## References
+  https://code-maze.com/csharp-exclude-properties-from-json-serialization/ -> What I use for this solution
+*/
 namespace Amvip.Infrastructure.Utils;
 public class IgnoreProperties
 {
